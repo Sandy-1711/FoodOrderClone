@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/FoodOrderClone/static/css/main.838427ed.css",
+    "main.js": "/FoodOrderClone/static/js/main.39b0ce14.js",
+    "index.html": "/FoodOrderClone/index.html",
+    "main.838427ed.css.map": "/FoodOrderClone/static/css/main.838427ed.css.map",
+    "main.39b0ce14.js.map": "/FoodOrderClone/static/js/main.39b0ce14.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.838427ed.css",
+    "static/js/main.39b0ce14.js"
+  ]
+}
