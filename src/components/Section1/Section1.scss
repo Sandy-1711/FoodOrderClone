@@ -2,8 +2,16 @@
     position: relative;
     overflow: hidden;
     width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    
+    flex: 0 0 100%;
 
     .home {
+        opacity: 0;
+        display: none;
+        overflow: hidden;
+        flex: 0 0 100%;
         position: relative;
         height: 54rem;
         width: 100%;
@@ -26,47 +34,6 @@
             height: 20rem;
         }
 
-        .corouselbutton {
-            transition: 0.3s all ease-in-out;
-
-            position: absolute;
-            scale: 0;
-            z-index: 200;
-            // left: 0;
-            top: 50%;
-            box-shadow: 0px 1px 2px black;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            svg {
-                height: 25px;
-                width: 25px;
-                color: #f43127;
-            }
-        }
-
-        .corouselbutton:hover {
-            transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-            background-color: #f43127;
-
-            svg {
-                color: white;
-            }
-        }
-
-        .corouselbutton:nth-child(1) {
-            left: 0px;
-
-        }
-
-        .corouselbutton:nth-child(2) {
-            right: 0px;
-        }
 
         .tomato {
             position: absolute;
@@ -148,7 +115,7 @@
         }
 
         .onion1 {
-            transition:2s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
             width: 7%;
             position: absolute;
             top: 15%;
@@ -385,16 +352,82 @@
         button:hover {
             color: #111111;
         }
+
+
     }
 
-    .home:hover {
-        .corouselbutton {
-            transition: 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    .corouselbutton {
+        transition: 0.3s all ease-in-out;
+
+        position: absolute;
+        scale: 0;
+        z-index: 200;
+        // left: 0;
+        top: 50%;
+        box-shadow: 0px 1px 2px black;
+        width: calc( 100dvw / 35 );
+        height:calc( 100dvw /35 );
+        border-radius: 50%;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (width<992px) {
+            width: calc( 100dvw / 25 );
+            height:calc( 100dvw /25 );
+        }
+        @media screen and (width<480px) {
+            width: calc( 100dvw / 15 );
+            height:calc( 100dvw /15 );
+        }
+
+        svg {
+            height: calc( 100dvw / 45 );
+            width: calc( 100dvw / 45);
+            color: #f43127;
+            @media screen and (width<992px) {
+                width: calc( 100dvw / 20 );
+                height:calc( 100dvw /20 );
+            }
+        }
+        @media screen and (width<480px) {
             scale: 1;
         }
     }
-}
 
+    .corouselbutton:hover {
+        transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+        background-color: #f43127;
+
+        svg {
+            color: white;
+        }
+    }
+
+    .corouselbutton:first-child {
+        left: 0px;
+
+    }
+
+    .corouselbutton:last-child {
+        right: 0px;
+    }
+
+    .home.active {
+        opacity: 1;
+        display: block;
+    }
+
+
+    .home:hover ~ .corouselbutton, .corouselbutton:hover {
+        transition: 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+        scale: 1;
+    }
+
+}
+.section1::-webkit-scrollbar{
+    display: none;
+}
 @media screen and (width<480px) {
     .section1 {
         .home {
@@ -483,7 +516,7 @@
             }
 
             p {
-                font-size: calc( 100dvw / 25 );
+                font-size: calc(100dvw / 25);
                 position: absolute;
                 text-align: center;
                 top: 66%;

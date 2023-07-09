@@ -10,7 +10,7 @@ header {
 
 
     .logoImage {
-        margin-left: 2%;
+        margin-left: 1.5%;
         width: 10%;
 
         img {
@@ -36,7 +36,7 @@ header {
             position: relative;
             padding: 45px 15px;
             font-family: sans-serif;
-            font-size: 16px;
+            font-size: calc( 100dvw / 100);
             line-height: 22px;
             font-weight: 600;
             color: #010101;
