@@ -169,16 +169,16 @@ button {
     overflow: hidden;
     position: absolute;
     margin-top: 30px;
-    width: 60%;
-    padding: 15px 30px;
+
     color: white;
     border-radius: 50px;
     border: none;
     outline: none;
     background-color: #f43127;
     font-family: 'Barlow', sans-serif;
-    font-size: 16px;
-
+    padding: calc(100dvw / 100) calc(100dvw / 100);
+    // font-size: calc(100dvw / 30);
+    width: calc(100dvw / 6);
 
 
     .introbutton {
@@ -229,13 +229,7 @@ button:hover {
 
 
 
-@media screen and (width<1100px) {
 
-
-    button {
-        width: 60%;
-    }
-}
 
 @media screen and (width<992px) {
     .section3 {
@@ -265,13 +259,18 @@ button:hover {
             .productContainerContainer {
 
                 .productContainer {
+                    gap: 4rem;
+
                     .productcard {
                         width: 95%;
 
                         button {
                             opacity: 1;
                             bottom: -1.5rem;
-                            width: 55%;
+                            width: calc(100dvw / 2);
+                            padding: calc(100dvw / 40) calc(100dvw / 100);
+                            font-size: calc(100dvw / 30);
+
                         }
 
                         .productimage {

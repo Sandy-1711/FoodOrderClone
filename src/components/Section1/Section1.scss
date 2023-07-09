@@ -399,7 +399,7 @@
     .section1 {
         .home {
 
-            height: 35rem;
+            height: 28rem;
 
             .corouselbutton {
                 display: none;
@@ -452,7 +452,7 @@
 
             button {
                 position: absolute;
-                bottom: 12%;
+                bottom: 16%;
                 left: 50%;
                 transform: translateX(-50%);
                 padding: calc(100dvw / 50) calc(100dvw / 100);
@@ -483,10 +483,10 @@
             }
 
             p {
-                font-size: 17px;
+                font-size: calc( 100dvw / 25 );
                 position: absolute;
                 text-align: center;
-                top: 70%;
+                top: 66%;
                 left: 50%;
                 transform: translateX(-50%);
                 width: 80%;
@@ -510,14 +510,14 @@
 
             .onion1 {
                 position: absolute;
-                top: 60%;
-                left: 10%;
+                top: 48%;
+                left: 16%;
             }
 
             .onion2 {
                 position: absolute;
-                top: 58%;
-                right: 30%;
+                top: 48%;
+                right: 20%;
             }
         }
     }
