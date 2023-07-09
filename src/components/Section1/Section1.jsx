@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import './Section1.scss'
 import Button from '../Button'
+import { render } from 'react-dom'
 const Section1 = () => {
     useEffect(function () {
         var element = document.getElementsByClassName("home")[0];
@@ -21,15 +22,19 @@ const Section1 = () => {
             document.getElementsByClassName('onion2')[0].style.transform = "translateX(0)";
 
         });
-    })
+
+        // document.querySelector('.bigitalian').style.fontSize = window.innerWidth / 40 + 'px'
+
+
+    },[])
     return (
         <div className='section1'>
             <div className='home'>
-                <div className='corouselbutton'>
-                    <svg viewBox="0 0 320 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" /></svg>
+                <div className='corouselbutton' >
+                    <svg fill='currentColor' viewBox="0 0 320 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" /></svg>
                 </div>
                 <div className='corouselbutton'>
-                    <svg viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" /></svg>
+                    <svg fill='currentColor' viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" /></svg>
                 </div>
                 <img className='tomato' src='https://radiustheme.com/demo/wordpress/themes/panpie/wp-content/uploads/2021/03/slider_shape_05.png' alt='tomato' />
 
@@ -44,8 +49,8 @@ const Section1 = () => {
                 <img className='slider' src='https://radiustheme.com/demo/wordpress/themes/panpie/wp-content/uploads/2021/03/slide02-1.png' alt='pizza1' />
 
                 <div className='intro'>
-                    <h1>BIG ITALIAN</h1>
-                    <h1>CHEES PIZZA</h1>
+                    <h1 className='bigitalian'>BIG ITALIAN</h1>
+                    <h1 >CHEES PIZZA</h1>
 
                 </div>
                 <p>Additional charge for premium toppings are fixed Minumum of 2 required.</p>

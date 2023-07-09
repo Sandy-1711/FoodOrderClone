@@ -3,19 +3,20 @@
     // height: 90dvh;
     overflow: hidden;
     width: 100%;
-    background-color: #faf7f2;
+    // background-color: #f6ebd9;
     // margin-top: 20%;
 
-    
+
 
     // top: 50%;
     .home {
         position: relative;
-        transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        // transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
         height: 54rem;
         // padding-bottom: 50%;
         width: 100%;
 
+        background-color: #faf7f2;
         @media screen and (width<1400px) {
             height: 40rem;
         }
@@ -32,34 +33,52 @@
             height: 20rem;
         }
 
-        .corouselbutton{
+        .corouselbutton {
+            transition: 0.3s all ease-in-out;
+
             position: absolute;
+            scale: 0;
             z-index: 200;
             // left: 0;
             top: 50%;
-            width: 50px;
-            height: 50px;
+            box-shadow: 0px 1px 2px black;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             background-color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
-            svg{
+
+            svg {
                 height: 25px;
                 width: 25px;
                 color: #f43127;
             }
         }
-        .corouselbutton:nth-child(1){
-            left: 0;
+
+        .corouselbutton:hover {
+            transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+            background-color: #f43127;
+
+            svg {
+                color: white;
+            }
         }
-        .corouselbutton:nth-child(2){
-            right: 10px;
+
+        .corouselbutton:nth-child(1) {
+            left: 0px;
+
         }
+
+        .corouselbutton:nth-child(2) {
+            right: 0px;
+        }
+
         .tomato {
             position: absolute;
             width: 15%;
-            top: 13%;
+            top: 12%;
             left: -2%;
             animation: tomat 4s;
 
@@ -81,6 +100,7 @@
                 }
             }
         }
+
 
         .redSpot {
             width: 46%;
@@ -210,27 +230,17 @@
         .intro {
             position: absolute;
             top: 40%;
-            left: 100px;
-
-            @media screen and (width<800px) {
-                top: 30%;
-            }
+            left: 17%;
 
 
             h1:first-child {
-                font-size: 2.5dvw;
-                font-family: 'Barlow', sans-serif;
+                font-size: calc(100dvw / 40);
+                font-family: sans-serif;
                 color: #f43127;
 
-                // opacity: 0;
-                @media screen and (width<1200px) {
-                    // font-size: 30px;
-                }
 
                 animation: bigitalian 4s;
 
-                // animation-delay: 1s;            
-                // animation-delay: 1s;
                 @keyframes bigitalian {
 
                     0%,
@@ -249,8 +259,9 @@
             }
 
             h1 {
-                font-size: 4dvw;
-                font-weight: 900;
+                font-size: calc(100dvw / 30);
+
+                // font-weight: 600;
                 color: #111111;
                 font-family: 'Barlow', sans-serif;
                 animation: chees 4s;
@@ -280,18 +291,15 @@
 
         p {
             position: absolute;
-            top: 60%;
-            left: 100px;
+            top: 55%;
+            left: 17%;
             // margin-top: 15px;
-            font-size: 1.25dvw;
+            font-size: calc(100dvw / 95);
             font-family: sans-serif;
             font-weight: 600;
-            width: 30%;
+            width: 28%;
             animation: text 4s;
 
-            @media screen and (width<700px) {
-                top: 50%;
-            }
 
             @keyframes text {
 
@@ -314,38 +322,25 @@
             z-index: 100;
             position: absolute;
             // top: 40%;
-            bottom: -70%;
-            left: 190px;
-            width: 12rem;
+            bottom: -64%;
+            left: 23%;
+            width: calc(100dvw / 8);
             opacity: 1;
             transition: 0.1s ease-in-out;
             overflow: hidden;
             position: relative;
             margin-top: 0px;
-            padding: 15px 30px;
+            padding: calc(100dvw / 124) calc(100dvw / 62);
+
             color: white;
             border-radius: 50px;
             border: none;
             outline: none;
             background-color: #fcb302;
             font-family: 'Barlow', sans-serif;
-            font-size: 16px;
+            font-size: calc(100dvw / 100);
 
-            // top: 10%;
-            @media screen and (width<1000px) {
-                font-size: 10px;
-                padding: 10px;
-                // width: 10rem;
-            }
 
-            @media screen and (width<700px) {
-                bottom: -60%;
-                left: 160px;
-                padding: 5px;
-                width: 8rem;
-                font-size: 10px;
-
-            }
 
             animation: butto 4s;
 
@@ -354,32 +349,18 @@
                 0%,
                 70% {
                     // transform: translateX();
-                    left: 150px;
+                    left: 21%;
                     opacity: 0;
                 }
 
                 100% {
                     // transform: translateX(190px);
-                    left: 190px;
+                    left: 23%;
                     opacity: 1;
                 }
             }
 
-            @media screen and (width<700px) {
-                @keyframes butto {
 
-                    0%,
-                    70% {
-                        left: 120px;
-                        opacity: 0;
-                    }
-
-                    100% {
-                        left: 160px;
-                        opacity: 1;
-                    }
-                }
-            }
 
             .introbutton {
                 display: flex;
@@ -389,11 +370,9 @@
 
                 svg {
                     z-index: 1000;
-                    height: 20px;
+                    height: calc(100dvw / 100);
 
-                    @media screen and (width<700px) {
-                        height: 12px;
-                    }
+
                 }
             }
 
@@ -425,26 +404,43 @@
             color: #111111;
         }
     }
+
+    .home:hover {
+        .corouselbutton {
+            transition: 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+            scale: 1;
+        }
+    }
 }
 
 @media screen and (width<480px) {
     .section1 {
         .home {
+
             height: 35rem;
 
+            .corouselbutton{
+                display: none;
+            }
             .tomato {
                 display: none;
             }
 
             .redSpot {
-                width: 60%;
-                top: 30px;
-                right: -100px;
+                width: 65%;
+                top: -10%;
+                right: -25%;
 
             }
 
+            .glow{
+                top: 27%;
+                left: 30%;
+                rotate: -35deg;
+                width:30%;
+            }
             .slider {
-                top: 40%;
+                top: 30%;
                 left: 50%;
                 width: 60%;
                 transform: translateX(-50%);
@@ -456,17 +452,19 @@
                 transform: translateX(-50%);
 
                 width: 90%;
-                top: 20%;
+                top: 12%;
 
                 h1:first-child {
                     text-align: center;
-                    font-size: 4dvh;
+                    font-size: calc(100dvw / 18);
                     // font-weight: 100;
                 }
 
                 h1:last-child {
                     text-align: center;
-                    font-size: 5dvh;
+                    font-size: calc(100dvw / 9);
+
+                    // font-size: 5dvh;
                 }
             }
 
@@ -475,22 +473,30 @@
                 bottom: 12%;
                 left: 50%;
                 transform: translateX(-50%);
-                padding: 15px 0px;
+                // padding: 15px 30px;
+                padding: calc( 100dvw / 50 )  calc( 100dvw / 100 );
+                font-size: calc( 100dvw / 30 );
+                
                 margin-top: 0;
-                width: 40%;
-
+                width:  calc(100dvw / 3);
+                // width: 40%;
+                .introbutton{
+                    svg{
+                        height:  calc( 100dvw / 30 );
+                    }
+                }
                 @keyframes butto {
 
                     0%,
                     70% {
                         opacity: 0;
-                        left: 180px;
+                        left: 40%;
                     }
 
                     100% {
                         opacity: 1;
                         left: 50%;
-                        transform: translateX(-50%);
+                        // transform: translateX(-50%);
                     }
                 }
             }
@@ -499,7 +505,7 @@
                 font-size: 17px;
                 position: absolute;
                 text-align: center;
-                top: 68%;
+                top: 70%;
                 left: 50%;
                 transform: translateX(-50%);
                 width: 80%;
@@ -510,13 +516,12 @@
 
                     0%,
                     60% {
-                        left: 180px;
+                        left: 40%;
                         opacity: 0;
                     }
 
                     100% {
                         left: 50%;
-                        transform: translateX(-50%);
                         opacity: 1;
                     }
                 }
