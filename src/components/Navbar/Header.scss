@@ -22,6 +22,8 @@ header {
 
 
     .links {
+        // overflow-y: scroll;
+
         ul {
             display: flex;
             gap: 1rem;
@@ -32,13 +34,29 @@ header {
         li {
             transition: 0.2s ease-in-out;
             position: relative;
-            padding: 45px 17px;
+            padding: 45px 15px;
             font-family: sans-serif;
             font-size: 16px;
             line-height: 22px;
             font-weight: 600;
             color: #010101;
             font-style: normal;
+
+            .fa-minus {
+                visibility: hidden;
+            }
+
+            .fa-plus {
+                visibility: hidden;
+            }
+
+            .invisible {
+                visibility: hidden;
+            }
+
+            .visible {
+                visibility: hidden;
+            }
         }
 
         li:hover {
@@ -59,6 +77,10 @@ header {
                     display: none;
                     top: 0rem;
                 }
+
+                .showSubmenu {
+                    display: flex;
+                }
             }
         }
 
@@ -74,7 +96,11 @@ header {
 
                 .foodmenu {
                     display: none;
-                    top: 0rem;
+                    top: 1.29rem;
+                }
+
+                .showSubmenu {
+                    display: flex;
                 }
             }
         }
@@ -90,9 +116,12 @@ header {
             @media screen and (width<992px) {
 
                 .pages {
-
-                    top: 0rem;
                     display: none;
+                    top: 1.29rem;
+                }
+
+                .showSubmenu {
+                    display: flex;
                 }
             }
         }
@@ -108,9 +137,12 @@ header {
             @media screen and (width<992px) {
 
                 .blogs {
-
-                    top: 0rem;
                     display: none;
+                    top: 1.29rem;
+                }
+
+                .showSubmenu {
+                    display: flex;
                 }
             }
         }
@@ -127,7 +159,11 @@ header {
 
                 .shops {
                     display: none;
-                    top: 0rem;
+                    top: 1.29rem;
+                }
+
+                .showSubmenu {
+                    display: flex;
                 }
             }
         }
@@ -170,12 +206,12 @@ header {
                 color: #5F5F5F;
                 font-weight: 600;
                 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                font-size: calc( 100dvw / 100 );
+                font-size: calc(100dvw / 100);
             }
 
             span:last-child {
 
-                font-size: calc( 100dvw / 80);
+                font-size: calc(100dvw / 80);
                 font-family: 'Barlow', sans-serif;
             }
         }
@@ -199,16 +235,18 @@ header {
             width: 18px;
         }
 
-        .cross{
+        .cross {
             display: none;
         }
 
-        .searchInVisible{
+        .searchInVisible {
             display: none;
         }
-        .searchVisible{
+
+        .searchVisible {
             display: block;
         }
+
         .searchBar {
             opacity: 0;
             visibility: hidden;
@@ -269,12 +307,14 @@ header {
                 }
             }
         }
+
         .visible {
             transition: all 140ms ease-in-out;
             opacity: 1;
             visibility: visible;
             top: 4.5rem;
         }
+
         .cartdropdown {
             position: absolute;
             top: 6rem;
@@ -414,13 +454,9 @@ header {
     display: none;
     background-color: #fff;
 
-    @media screen and (width<480px) {
-        position: relative;
-        top: 0rem;
-    }
 
     ul {
-        padding: 0;
+        padding: 10px 0;
         margin: 0;
         flex-direction: column;
         gap: 0rem;
@@ -447,7 +483,7 @@ header {
         padding: 0rem;
         align-items: center;
         justify-content: space-between;
-        position: sticky;
+        position: relative;
         top: 0;
 
         .menu {
@@ -459,15 +495,17 @@ header {
             display: none;
         }
 
-       
-        .search{
-            .searchBar{
+
+        .search {
+            .searchBar {
                 top: 3rem;
             }
-            .visible{
+
+            .visible {
                 top: 2.75rem;
             }
         }
+
         .linksmobile {
             display: flex;
             position: absolute;
@@ -489,9 +527,40 @@ header {
                 background-color: #ececec;
 
                 li {
-                    padding: 20px;
-                    
+                    padding: 0;
+                    // margin: 0 12px;
+                    border-top: 1px solid rgb(209, 209, 209);
                     border-bottom: 1px solid rgb(209, 209, 209);
+
+                    .menuOuter {
+                        display: flex;
+                        padding: 0 12px;
+                        height: 40px;
+                        width: 100%;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+
+                    .fa-plus {
+                        visibility: visible;
+                        display: block;
+                    }
+
+                    .fa-minus {
+                        visibility: hidden;
+                        display: none;
+                    }
+
+                    .invisible {
+                        display: none;
+                        visibility: hidden;
+                    }
+
+                    .visible {
+                        display: block;
+                        visibility: visible;
+
+                    }
                 }
             }
         }
@@ -554,13 +623,32 @@ header {
         }
 
 
+        .homemenu,
+        .foodmenu,
+        .pages,
+        .blogs,
+        .shops {
+            position: relative;
+            // top: 2rem;
+            left: -1.25rem;
+            // padding-left: 20px;
+            width: 100dvw;
 
+            ul {
+                width: 100%;
+
+                li {
+                    width: 100%;
+                    padding: 10px 40px;
+                }
+            }
+        }
     }
 }
 
 @media screen and (width<480px) {
     header {
-        padding: 0.5rem;
+        padding: 0.5 0.25rem;
         align-items: center;
         justify-content: space-between;
 
@@ -571,8 +659,9 @@ header {
         .links {
             display: none;
         }
-        .search{
-            .searchBar{
+
+        .search {
+            .searchBar {
                 top: 4rem;
                 left: -18rem;
                 font-size: 20px;
@@ -580,18 +669,20 @@ header {
                 top: 6rem;
                 height: 100px;
             }
-            .visible{
+
+            .visible {
                 top: 3rem;
                 left: -18rem;
             }
         }
+
         .linksmobile {
             display: flex;
             position: absolute;
             flex-direction: column;
             width: 100%;
-            // top: 4rem;
             top: 100%;
+            // top: 4rem;
             right: 0;
             height: max-content;
 
@@ -608,16 +699,10 @@ header {
                 background-color: #ececec;
 
                 li {
-                    padding: 20px;
+                    padding: 8px;
                     border-bottom: 1px solid rgb(209, 209, 209);
 
-                    .homemenu,
-                    .foodmenu,
-                    .blogs,
-                    .shops,
-                    .pages {
-                        display: none;
-                    }
+
                 }
             }
         }
@@ -647,7 +732,7 @@ header {
             }
         }
 
-        
+
         .right {
             gap: 0.5rem;
 
@@ -669,6 +754,14 @@ header {
         }
 
 
-
+        .homemenu,
+        .foodmenu,
+        .pages,
+        .blogs,
+        .shops{
+            ul li{
+                padding: 15px 50px;
+            }
+        }
     }
 }

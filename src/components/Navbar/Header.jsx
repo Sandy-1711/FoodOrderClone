@@ -20,8 +20,18 @@ export const Header = () => {
       </div>
       <div className='links'>
         <ul >
-          <li>
-            <span>HOME</span>
+          <li >
+            <div className='menuOuter'
+              onClick={function () {
+
+                document.querySelector('.fa-plus').classList.toggle('invisible');
+                document.querySelector('.fa-minus').classList.toggle('visible');
+                document.querySelector('.homemenu').classList.toggle('showSubmenu')
+              }}>
+
+              <span>HOME</span> <i className="fa-solid fa-plus"></i><i
+                className='minus' class="fa-solid fa-minus"></i>
+            </div>
 
             {/* Submenu */}
             <div className='homemenu'>
@@ -35,7 +45,17 @@ export const Header = () => {
               </ul>
             </div>
           </li>
-          <li><span>MENU</span>
+          <li><div className='menuOuter'
+            onClick={function () {
+
+              document.querySelector('.fa-plus').classList.toggle('invisible');
+              document.querySelector('.fa-minus').classList.toggle('visible');
+              document.querySelector('.foodmenu').classList.toggle('showSubmenu')
+            }}>
+
+            <span>MENU</span> <i className="fa-solid fa-plus"></i><i
+              className='minus' class="fa-solid fa-minus"></i>
+          </div>
             {/* Submenu */}
 
             <div className='foodmenu'>
@@ -50,7 +70,18 @@ export const Header = () => {
             </div>
           </li>
 
-          <li><span>PAGES</span>
+          <li
+          ><div className='menuOuter'
+            onClick={function () {
+
+              document.querySelector('.fa-plus').classList.toggle('invisible');
+              document.querySelector('.fa-minus').classList.toggle('visible');
+              document.querySelector('.pages').classList.toggle('showSubmenu')
+            }}>
+
+              <span>PAGES</span> <i className="fa-solid fa-plus"></i><i
+                className='minus' class="fa-solid fa-minus"></i>
+            </div>
             {/* Submenu */}
 
             <div className='pages'>
@@ -61,7 +92,17 @@ export const Header = () => {
                 <li><span>Event Page</span></li>
               </ul>
             </div></li>
-          <li><span>BLOG</span>
+          <li
+          ><div className='menuOuter' onClick={function () {
+
+            document.querySelector('.fa-plus').classList.toggle('invisible');
+            document.querySelector('.fa-minus').classList.toggle('visible');
+            document.querySelector('.blogs').classList.toggle('showSubmenu')
+          }}>
+
+              <span>BLOG</span> <i className="fa-solid fa-plus"></i><i
+                className='minus' class="fa-solid fa-minus"></i>
+            </div>
             {/* Submenu */}
 
             <div className='blogs'>
@@ -73,7 +114,17 @@ export const Header = () => {
               </ul>
             </div>
           </li>
-          <li><span>SHOP</span>
+          <li
+          ><div className='menuOuter' onClick={function () {
+
+            document.querySelector('.fa-plus').classList.toggle('invisible');
+            document.querySelector('.fa-minus').classList.toggle('visible');
+            document.querySelector('.shops').classList.toggle('showSubmenu')
+          }}>
+
+              <span>SHOP</span> <i className="fa-solid fa-plus"></i><i
+                className='minus' class="fa-solid fa-minus"></i>
+            </div>
             {/* Submenu */}
 
             <div className='shops'>
@@ -84,7 +135,11 @@ export const Header = () => {
               </ul>
             </div>
           </li>
-          <li><span>CONTACT</span></li>
+          <li><div className='menuOuter'>
+
+            <span>CONTACT</span>
+          </div>
+          </li>
         </ul>
       </div>
       <div className='rightportion'>
