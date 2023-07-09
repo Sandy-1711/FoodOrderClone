@@ -1,14 +1,25 @@
 import React, { useEffect } from 'react'
 import './Section1.scss'
 import Button from '../Button'
-import { render } from 'react-dom'
+
+
 const Section1 = () => {
+
+
+
     useEffect(function () {
+
+
+        // script to move onions on mouse movement
+
+
         var element = document.getElementsByClassName("home")[0];
         element.addEventListener("mousemove", function (event) {
             var mouseX = event.clientX;
             var elementX = element.getBoundingClientRect().left;
             var offsetX = mouseX - elementX;
+
+            // Condition so that animation does not happen on smaller devices that do not have mouse
 
             if (window.innerWidth >= 480) {
 
@@ -22,11 +33,10 @@ const Section1 = () => {
             document.getElementsByClassName('onion2')[0].style.transform = "translateX(0)";
 
         });
+    }, [])
 
-        // document.querySelector('.bigitalian').style.fontSize = window.innerWidth / 40 + 'px'
 
 
-    },[])
     return (
         <div className='section1'>
             <div className='home'>

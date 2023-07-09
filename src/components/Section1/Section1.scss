@@ -1,22 +1,15 @@
 .section1 {
     position: relative;
-    // height: 90dvh;
     overflow: hidden;
     width: 100%;
-    // background-color: #f6ebd9;
-    // margin-top: 20%;
 
-
-
-    // top: 50%;
     .home {
         position: relative;
-        // transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
         height: 54rem;
-        // padding-bottom: 50%;
         width: 100%;
 
         background-color: #faf7f2;
+
         @media screen and (width<1400px) {
             height: 40rem;
         }
@@ -104,7 +97,6 @@
 
         .redSpot {
             width: 46%;
-            // height: 50%;
             position: absolute;
             top: -3%;
             right: -1%;
@@ -156,7 +148,7 @@
         }
 
         .onion1 {
-            transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition:2s cubic-bezier(0.165, 0.84, 0.44, 1);
             width: 7%;
             position: absolute;
             top: 15%;
@@ -185,21 +177,17 @@
             position: absolute;
             top: 77%;
             right: 16%;
-            // transform: rotate(150deg);
-            // rotate: 150deg;
             animation: oni2 4s;
 
             @keyframes oni2 {
 
                 0%,
                 80% {
-                    // transform: rotate(150deg);
                     opacity: 0;
                     transform: translateY(20px);
                 }
 
                 100% {
-                    // transform: rotate(150deg);
 
                     transform: translateY(0px);
                     opacity: 1;
@@ -261,7 +249,6 @@
             h1 {
                 font-size: calc(100dvw / 30);
 
-                // font-weight: 600;
                 color: #111111;
                 font-family: 'Barlow', sans-serif;
                 animation: chees 4s;
@@ -293,7 +280,6 @@
             position: absolute;
             top: 55%;
             left: 17%;
-            // margin-top: 15px;
             font-size: calc(100dvw / 95);
             font-family: sans-serif;
             font-weight: 600;
@@ -321,7 +307,6 @@
         button {
             z-index: 100;
             position: absolute;
-            // top: 40%;
             bottom: -64%;
             left: 23%;
             width: calc(100dvw / 8);
@@ -348,13 +333,11 @@
 
                 0%,
                 70% {
-                    // transform: translateX();
                     left: 21%;
                     opacity: 0;
                 }
 
                 100% {
-                    // transform: translateX(190px);
                     left: 23%;
                     opacity: 1;
                 }
@@ -387,7 +370,6 @@
             position: absolute;
             top: -25px;
             left: -100px;
-            // scale: 0.1;
             border-radius: 50%;
             padding: 50px;
             background-color: white;
@@ -419,9 +401,10 @@
 
             height: 35rem;
 
-            .corouselbutton{
+            .corouselbutton {
                 display: none;
             }
+
             .tomato {
                 display: none;
             }
@@ -433,12 +416,13 @@
 
             }
 
-            .glow{
+            .glow {
                 top: 27%;
                 left: 30%;
                 rotate: -35deg;
-                width:30%;
+                width: 30%;
             }
+
             .slider {
                 top: 30%;
                 left: 50%;
@@ -457,14 +441,12 @@
                 h1:first-child {
                     text-align: center;
                     font-size: calc(100dvw / 18);
-                    // font-weight: 100;
                 }
 
                 h1:last-child {
                     text-align: center;
                     font-size: calc(100dvw / 9);
 
-                    // font-size: 5dvh;
                 }
             }
 
@@ -473,18 +455,18 @@
                 bottom: 12%;
                 left: 50%;
                 transform: translateX(-50%);
-                // padding: 15px 30px;
-                padding: calc( 100dvw / 50 )  calc( 100dvw / 100 );
-                font-size: calc( 100dvw / 30 );
-                
+                padding: calc(100dvw / 50) calc(100dvw / 100);
+                font-size: calc(100dvw / 30);
+
                 margin-top: 0;
-                width:  calc(100dvw / 3);
-                // width: 40%;
-                .introbutton{
-                    svg{
-                        height:  calc( 100dvw / 30 );
+                width: calc(100dvw / 3);
+
+                .introbutton {
+                    svg {
+                        height: calc(100dvw / 30);
                     }
                 }
+
                 @keyframes butto {
 
                     0%,
@@ -496,7 +478,6 @@
                     100% {
                         opacity: 1;
                         left: 50%;
-                        // transform: translateX(-50%);
                     }
                 }
             }

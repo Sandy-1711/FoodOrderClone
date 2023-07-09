@@ -371,7 +371,7 @@ header {
     }
 
     .rightportion {
-        margin-right: 5%;
+        margin-right: 2%;
         width: 20rem;
         display: flex;
         justify-content: space-between;
@@ -648,12 +648,14 @@ header {
 
 @media screen and (width<480px) {
     header {
-        padding: 0.5 0.25rem;
+        padding: 0.5rem 0rem;
         align-items: center;
         justify-content: space-between;
 
         .menu {
             display: flex;
+            margin-left: 20px;
+            margin-right: 5px;
         }
 
         .links {
