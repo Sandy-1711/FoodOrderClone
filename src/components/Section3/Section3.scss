@@ -178,7 +178,8 @@ button {
     font-family: 'Barlow', sans-serif;
     padding: calc(100dvw / 100) calc(100dvw / 100);
     // font-size: calc(100dvw / 30);
-    width: calc(100dvw / 6);
+    width: calc(100dvw / 7.5);
+    font-size: calc(100dvw / 100);
 
 
     .introbutton {
@@ -217,8 +218,8 @@ button::before {
 
 button:hover::before {
     transition: 0.2s ease-in-out;
-    scale: 2.5;
-    left: 50px;
+    scale: 3;
+    left: 100px;
 }
 
 
@@ -240,6 +241,9 @@ button:hover {
                     .productcard {
                         width: 47%;
 
+                    }
+                    button{
+                        width: calc(100dvw / 5);
                     }
 
                 }
