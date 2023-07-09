@@ -34,14 +34,20 @@ header {
         li {
             transition: 0.2s ease-in-out;
             position: relative;
-            padding: 45px 15px;
+            padding: 45px calc( 100dvw / 900);
             font-family: sans-serif;
-            font-size: calc( 100dvw / 100);
+            font-size: calc( 100dvw / 115);
             line-height: 22px;
             font-weight: 600;
             color: #010101;
             font-style: normal;
 
+
+
+            @media screen and (width<992px) {
+                font-size: 16px;
+            }
+            
             .fa-minus {
                 visibility: hidden;
             }
@@ -79,6 +85,7 @@ header {
                 }
 
                 .showSubmenu {
+                    transition: 1s ease-in-out;
                     display: flex;
                 }
             }
