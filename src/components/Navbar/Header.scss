@@ -652,10 +652,11 @@ header {
         align-items: center;
         justify-content: space-between;
 
+        .rightportion{
+            margin-right: 2px;
+        }
         .menu {
             display: flex;
-            margin-left: 20px;
-            margin-right: 5px;
         }
 
         .links {
