@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/FoodOrderClone/static/css/main.5558e7a1.css",
-    "main.js": "/FoodOrderClone/static/js/main.0172a493.js",
+    "main.css": "/FoodOrderClone/static/css/main.976f52cd.css",
+    "main.js": "/FoodOrderClone/static/js/main.26a5e39b.js",
     "index.html": "/FoodOrderClone/index.html",
-    "main.5558e7a1.css.map": "/FoodOrderClone/static/css/main.5558e7a1.css.map",
-    "main.0172a493.js.map": "/FoodOrderClone/static/js/main.0172a493.js.map"
+    "main.976f52cd.css.map": "/FoodOrderClone/static/css/main.976f52cd.css.map",
+    "main.26a5e39b.js.map": "/FoodOrderClone/static/js/main.26a5e39b.js.map"
   },
   "entrypoints": [
-    "static/css/main.5558e7a1.css",
-    "static/js/main.0172a493.js"
+    "static/css/main.976f52cd.css",
+    "static/js/main.26a5e39b.js"
   ]
 }
