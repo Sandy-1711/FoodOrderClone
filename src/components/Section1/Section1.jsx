@@ -77,7 +77,7 @@ const Section1 = () => {
                 currentIndex = 0;
             }
             carouselItems[currentIndex].classList.toggle('active')
-        }, 10000)
+        },15000)
 
 
     })
